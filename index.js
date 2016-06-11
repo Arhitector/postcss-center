@@ -6,7 +6,6 @@ module.exports = postcss.plugin('postcss-center', function (opts) {
 
 		css.walkDecls(decl => {
 			if (decl.prop === 'center') {
-				var position = "";
 				var centerMethod =  {
 					checkExist: function (parametr) {
 						return decl.value.indexOf(parametr) !== -1;

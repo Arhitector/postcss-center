@@ -2,19 +2,29 @@
 
 [PostCSS] plugin Plugin shortcut for center elements.
 
+Plugin supports several properties
+center
+center-abs
+horizontal
+horizontal-abs
+vertical
+vertical-abs
+
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/Arhitector/postcss-center.svg
 [ci]:      https://travis-ci.org/Arhitector/postcss-center
 
 ```css
 .foo {
-    /* Input example */
+    center: center;
 }
 ```
 
-```css
+```css output
 .foo {
-  /* Output example */
+  position: relative;
+  top: 50%;
+  left: 50%;
 }
 ```
 
