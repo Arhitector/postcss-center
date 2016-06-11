@@ -1,0 +1,32 @@
+{
+  "name": "postcss-center",
+  "version": "0.0.1",
+  "description": "PostCSS plugin Plugin shortcut for center elements",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "center"
+  ],
+  "author": "Arhitector <tantalidovo@mail.ru>",
+  "license": "MIT",
+  "repository": "Arhitector/postcss-center",
+  "bugs": {
+    "url": "https://github.com/Arhitector/postcss-center/issues"
+  },
+  "homepage": "https://github.com/Arhitector/postcss-center",
+  "dependencies": {
+    "postcss": "^5.0.21"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "eslint": "^2.10.0",
+    "eslint-config-postcss": "^2.0.2"
+  },
+  "scripts": {
+    "test": "ava && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5"
+  }
+}
