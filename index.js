@@ -14,18 +14,13 @@ module.exports = postcss.plugin('postcss-center', function (opts) {
 						return Object.assign({}, options.defParams, obj) ;
 					},
 					getPosition: function () {
-						if (this.checkExist(options.abs)) {
-							return "absolute";
-						} else {
-							return "relative";
-						}
+						return this.checkExist(options.abs) ? "absolute" : "relative";
 					},
 					checkPosParams: function () {
+						var position = "";
 						for (var key in decl.parent.nodes) {
 							if(decl.parent.nodes[key].prop === "position") {
 								return true;
-							}else {
-								return false;
 							}
 						};
 					},
@@ -35,6 +30,8 @@ module.exports = postcss.plugin('postcss-center', function (opts) {
 							posParams.prop = "position";
 							posParams.value = this.getPosition();
 							return this.createParams(posParams);
+						}else {
+							return "";
 						}
 					},
 					trParams: function () {
@@ -90,6 +87,7 @@ module.exports = postcss.plugin('postcss-center', function (opts) {
 						}
 					}
 				};
+
 				centerMethod.setRules();
 				decl.root().insertAfter(decl.parent, rule)
 				rule.source = decl.parent.source;
